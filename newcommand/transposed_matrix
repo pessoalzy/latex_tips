@@ -1,0 +1,4 @@
+% https://zhuanlan.zhihu.com/p/27490955
+%% ! require newcommmand `\matr`
+
+\newcommand*{\transposed}[1]{\matr{#1}^{\mathrm{T}}}
