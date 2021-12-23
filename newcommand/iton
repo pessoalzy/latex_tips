@@ -1,0 +1,12 @@
+% input simple list from i to n
+% \iton{1} will be replaced by "1,2,\cdots,n"
+% \iton{0} will be replaced by "0,1,\cdots,n"
+
+\usepackage{xstring} % https://tex.stackexchange.com/questions/61598/new-command-with-cases-conditionals-if-thens
+
+\newcommand*{\iton}[1]{%
+    \IfEqCase{#1}{%
+        {1}{1,2,\cdots,n}%
+        {0}{0,1,\cdots,n}%
+    }[\PackageError{tree}{Undefined option to iton: #1}{}]%
+}%
